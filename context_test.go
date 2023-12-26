@@ -15,7 +15,6 @@ func TestContext(t *testing.T) {
 	fmt.Println(todo)
 }
 
-
 // Context With Value
 func TestContextWithValue(t *testing.T) {
 
@@ -29,7 +28,6 @@ func TestContextWithValue(t *testing.T) {
 
 	contextF := context.WithValue(contextC, "f", "F")
 
-
 	fmt.Println(contextA)
 	fmt.Println(contextB)
 	fmt.Println(contextC)
@@ -37,11 +35,9 @@ func TestContextWithValue(t *testing.T) {
 	fmt.Println(contextE)
 	fmt.Println(contextF)
 
-
-
 	// Context Get Value
-	fmt.Println(contextF.Value("f"))	// Dapat
-	fmt.Println(contextF.Value("c"))	// Dapat Milik Parent
-	fmt.Println(contextF.Value("b"))	// Tidak dapat, beda parent
-	fmt.Println(contextA.Value("b"))	// Tidak dapat mengambil data child
+	fmt.Println(contextF.Value("f")) // Dapat
+	fmt.Println(contextF.Value("c")) // Dapat Milik Parent
+	fmt.Println(contextF.Value("b")) // Tidak dapat, beda parent
+	fmt.Println(contextA.Value("b")) // Tidak dapat mengambil data child
 }
